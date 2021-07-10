@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -12,7 +13,7 @@ public class Main extends Application {
     public void start(Stage primaryStage){
     try{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Medi Manage");
+        primaryStage.initStyle(StageStyle.DECORATED);
         primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.show();
     }
