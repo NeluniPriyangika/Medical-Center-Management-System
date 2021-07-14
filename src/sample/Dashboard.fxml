@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="210.0" layoutY="-2.0" prefHeight="57.0" prefWidth="183.0" text="Dash Board">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="389.0" layoutY="65.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="191.0" text="Manage Docter Appoinments" />
+      <Button layoutX="388.0" layoutY="125.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="191.0" text="Manage Docter Time Table" />
+      <Button layoutX="388.0" layoutY="183.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="191.0" text="Manage Employees " />
+      <Button layoutX="389.0" layoutY="240.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="191.0" text="Phamacy Section" />
+   </children>
+</AnchorPane>

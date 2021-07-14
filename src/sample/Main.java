@@ -14,7 +14,7 @@ public class Main extends Application {
     try{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.initStyle(StageStyle.DECORATED);
-        primaryStage.setScene(new Scene(root, 600, 500));
+        primaryStage.setScene(new Scene(root, 700, 500));
         primaryStage.show();
     }
     catch (Exception e){
