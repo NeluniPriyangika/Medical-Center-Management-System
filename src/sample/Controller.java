@@ -1,4 +1,6 @@
 package sample;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,13 +11,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.event.ActionEvent;
-
 import java.io.IOException;
-import java.net.URL;
 import java.sql.*;
-import java.util.ResourceBundle;
 
+
+//starting screen controller
 public class Controller {
     @FXML
     private Button cancelbutton;
@@ -34,10 +34,7 @@ public class Controller {
 
 
     public void validatelogin(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
-
-
-
-
+        //Database connection
         String jdbcURL = "jdbc:mysql://localhost/medibase";
         String username = "root";
         String password = "0852";
@@ -57,10 +54,6 @@ public class Controller {
             stage.setScene(scene);
             stage.show();
 
-
-
-
-
         } else{
             loginmessagelabel.setText("Login failed");
         }
@@ -74,10 +67,9 @@ public class Controller {
                 validatelogin(event);
             }else
               loginmessagelabel.setText("Please Enter username and password");
-
-
         }
 
+        //rediretcs to the registration page
     public void switchtoSC1(ActionEvent event)throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Register.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

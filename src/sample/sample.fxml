@@ -40,9 +40,15 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="loginbutton" layoutX="14.0" layoutY="280.0" mnemonicParsing="false" onAction="#loginbuttonAction" prefHeight="30.0" prefWidth="113.0" style="-fx-background-color: #00008B;" text="Login" />
-            <Button fx:id="registerbutton" layoutX="215.0" layoutY="280.0" mnemonicParsing="false" onAction="#switchtoSC1" prefHeight="30.0" prefWidth="113.0" style="-fx-background-color: #00008B;" text="Register" />
-            <Button fx:id="cancelbutton" layoutX="15.0" layoutY="365.0" mnemonicParsing="false" onAction="#cancelbuttonAction" prefHeight="30.0" prefWidth="316.0" style="-fx-background-color: #FF0000;" text="Cancel" />
+            <Button fx:id="loginbutton" layoutX="14.0" layoutY="280.0" mnemonicParsing="false" onAction="#loginbuttonAction" prefHeight="30.0" prefWidth="113.0" style="-fx-background-color: #00008B;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="registerbutton" layoutX="215.0" layoutY="280.0" mnemonicParsing="false" onAction="#switchtoSC1" prefHeight="30.0" prefWidth="113.0" style="-fx-background-color: #00008B;" text="Register" textFill="WHITE" />
+            <Button fx:id="cancelbutton" layoutX="15.0" layoutY="365.0" mnemonicParsing="false" onAction="#cancelbuttonAction" prefHeight="30.0" prefWidth="316.0" style="-fx-background-color: #FF0000;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
             <Label fx:id="loginmessagelabel" layoutX="84.0" layoutY="330.0" prefHeight="18.0" prefWidth="263.0" textFill="#ee1717" />
             <TextField fx:id="username1" layoutX="103.0" layoutY="188.0" prefHeight="26.0" prefWidth="237.0" promptText="username" />
             <PasswordField fx:id="password1" layoutX="99.0" layoutY="231.0" prefHeight="26.0" prefWidth="243.0" promptText="password" />
