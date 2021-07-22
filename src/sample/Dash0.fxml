@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DashController">
+   <left>
+      <AnchorPane BorderPane.alignment="TOP_LEFT">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sidebar1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="240.0" fitWidth="217.0" layoutX="-17.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ss1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="173.0" fitWidth="207.0" layoutX="-7.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ss1.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="18.0" layoutY="90.0" mnemonicParsing="false" onAction="#seeAll" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="View all apoinments" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="18.0" layoutY="154.0" mnemonicParsing="false" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="View Covid Risk&#10;Appoinments" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="18.0" layoutY="223.0" mnemonicParsing="false" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="Docter&#10;Time Table" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="18.0" layoutY="22.0" mnemonicParsing="false" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="Search Appoinment" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="17.0" layoutY="286.0" mnemonicParsing="false" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="Phamacy&#10;Section" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="17.0" layoutY="354.0" mnemonicParsing="false" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="Phamacy&#10;Section" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="420.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="8.0" layoutY="12.0" text="Patient Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="112.0" layoutY="10.0" prefHeight="25.0" prefWidth="318.0" />
+            <Label layoutX="9.0" layoutY="47.0" text="Patient ID No">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id" layoutX="112.0" layoutY="44.0" prefHeight="25.0" prefWidth="318.0" />
+            <Label layoutX="9.0" layoutY="83.0" text="Docter Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="docter" layoutX="112.0" layoutY="79.0" prefHeight="25.0" prefWidth="318.0" />
+            <Label layoutX="8.0" layoutY="116.0" text="Patient Phone No." />
+            <TextField fx:id="phone" layoutX="113.0" layoutY="112.0" prefHeight="25.0" prefWidth="318.0" />
+            <Label layoutX="9.0" layoutY="152.0" text="Appoinment Date" />
+            <Label layoutX="9.0" layoutY="193.0" text="Appoinment Time" />
+            <TextField fx:id="time" layoutX="114.0" layoutY="190.0" prefHeight="25.0" prefWidth="79.0" />
+            <DatePicker fx:id="date" layoutX="113.0" layoutY="148.0" />
+            <Label layoutX="9.0" layoutY="241.0" text="Covid Notes">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="covid" layoutX="113.0" layoutY="235.0" prefHeight="64.0" prefWidth="314.0" promptText="During your call , ask the patient if they have been in quarantine or they have any contact with a covid-19 patient and have they any symptoms similar to covid" />
+            <CheckBox fx:id="iscovid" layoutX="113.0" layoutY="312.0" mnemonicParsing="false" text="Has a risk to be covid 19 possitive" />
+            <Label layoutX="134.0" layoutY="327.0" text="(If there is any risk, please check this box)" textFill="#ff0d0d">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="messageLabel" layoutX="22.0" layoutY="375.0" prefHeight="17.0" prefWidth="263.0" textFill="#30ab4a">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="addnewappButton" layoutX="290.0" layoutY="372.0" mnemonicParsing="false" onAction="#newappoinment" text="Add a new appoinment" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

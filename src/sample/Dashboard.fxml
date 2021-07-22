@@ -40,7 +40,7 @@
       </VBox>
    </left>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="addnewappButton" layoutX="303.0" layoutY="363.0" mnemonicParsing="false" onAction="#newappoinment" text="Add a new appoinment" />
             <Label layoutX="19.0" layoutY="16.0" text="Patient Name">
