@@ -143,7 +143,20 @@ public class DashController implements Initializable {
 
     public void seeAll(){
         try{
-            FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("Dash1.fxml"));
+            FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("ViewAllAppoinment.fxml"));
+            Parent root1=(Parent) fxmlLoader.load();
+            Stage stage= new Stage();
+            stage.setTitle("All appoinments");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void seeAllCovid(){
+        try{
+            FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("ViewAllCovidApp.fxml"));
             Parent root1=(Parent) fxmlLoader.load();
             Stage stage= new Stage();
             stage.setTitle("All appoinments");

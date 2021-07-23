@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="1082.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewAllCovidController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" layoutX="15.0" layoutY="86.0" prefHeight="531.0" prefWidth="1051.0">
+               <columns>
+                  <TableColumn fx:id="col_id" prefWidth="75.0" text="Patient ID " />
+                  <TableColumn fx:id="col_pname" prefWidth="212.0" text="Patient Name" />
+                  <TableColumn fx:id="col_pnic" minWidth="0.0" prefWidth="117.0" text="Patient NIC " />
+                  <TableColumn fx:id="col_dname" minWidth="0.0" prefWidth="117.0" text="Docter Name " />
+                  <TableColumn fx:id="col_pno" minWidth="0.0" prefWidth="117.0" text="Patient Phone No" />
+                  <TableColumn fx:id="col_appdate" minWidth="0.0" prefWidth="117.0" text="Appoinment Date" />
+                  <TableColumn fx:id="col_apptime" minWidth="0.0" prefWidth="117.0" text="Appoinment Time" />
+                  <TableColumn fx:id="col_covid" minWidth="0.0" prefWidth="117.0" text="Covid Notes " />
+               </columns>
+            </TableView>
+            <Label layoutX="18.0" layoutY="46.0" text="Search Here">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchbar" layoutX="128.0" layoutY="47.0" prefHeight="25.0" prefWidth="391.0" promptText="Search Appoinments" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

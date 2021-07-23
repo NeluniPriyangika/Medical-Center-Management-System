@@ -1,14 +1,14 @@
 package sample;
-
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,7 +16,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class Dash1Controller implements Initializable {
+public class ViewAllCovidController implements Initializable{
+    @FXML
+    private TextField searchbar;
     @FXML
     private TableView<ModelTable> table;
     @FXML
@@ -39,7 +41,6 @@ public class Dash1Controller implements Initializable {
 
 
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //DbConnection
@@ -48,14 +49,14 @@ public class Dash1Controller implements Initializable {
         String password = "0852";
         try {
             Connection connection = DriverManager.getConnection(jdbcURL,username,password);
-            ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM appoinments");
+            ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM covid_risk_appoinments");
             while (rs.next()){
                 oblist.add(new ModelTable(rs.getInt("Patient_No"),rs.getString("Patient_Name"),
                         rs.getString("Patient_ID"),
                         rs.getString("Docter_Name"),
                         rs.getString("Patient_Phone"),
-                        rs.getString("Appoin_Date"),
-                        rs.getString("Time_app"),
+                        rs.getString("App_Date"),
+                        rs.getString("App_Time"),
                         rs.getString("Covid_Note")));
             }
         } catch (SQLException throwables) {
@@ -67,6 +68,7 @@ public class Dash1Controller implements Initializable {
             e.printStackTrace();
         }
 
+        //setting the data in the tableview
         col_id.setCellValueFactory(new PropertyValueFactory<>("pno"));
         col_pname.setCellValueFactory(new PropertyValueFactory<>("pname"));
         col_pnic.setCellValueFactory(new PropertyValueFactory<>("pid"));
@@ -76,6 +78,34 @@ public class Dash1Controller implements Initializable {
         col_apptime.setCellValueFactory(new PropertyValueFactory<>("apptime"));
         col_covid.setCellValueFactory(new PropertyValueFactory<>("covidnote"));
         table.setItems(oblist);
+
+        //search option
+        FilteredList<ModelTable> filteredData = new FilteredList<>(oblist, b -> true);
+        searchbar.textProperty().addListener((observable, oldvalue, newValue) -> {
+            filteredData.setPredicate(ModelTable -> {
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+                String lowerCaseFilter = newValue.toLowerCase();
+                if (ModelTable.getPname().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true;
+                } else if (ModelTable.getCovidnote().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true;
+                } else if (ModelTable.getDname().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true;
+                } else if (ModelTable.getAppdate().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true;
+                } else
+                    return false;
+
+            });
+
+
+        });
+        SortedList<ModelTable> sortedData = new SortedList<>(filteredData);
+        sortedData.comparatorProperty().bind(table.comparatorProperty());
+        table.setItems(sortedData);
+
     }
 
 }
