@@ -48,7 +48,7 @@ public class Controller {
         rs = pst.executeQuery();
         if(rs.next()){
         loginmessagelabel.setText("Congratulations");
-            Parent root = FXMLLoader.load(getClass().getResource("Dash0.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("DashBoard.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene=new Scene(root);
             stage.setScene(scene);

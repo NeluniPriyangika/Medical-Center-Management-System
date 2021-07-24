@@ -57,7 +57,7 @@ public class RegController {
     }
     public void switchtoLogin(ActionEvent event)throws IOException {
 
-            Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("StartScreen.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene=new Scene(root);
             stage.setScene(scene);

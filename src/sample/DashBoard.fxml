@@ -41,22 +41,7 @@
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="18.0" layoutY="223.0" mnemonicParsing="false" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="Docter&#10;Time Table" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <Button layoutX="18.0" layoutY="22.0" mnemonicParsing="false" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="Search Appoinment" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <Button layoutX="17.0" layoutY="286.0" mnemonicParsing="false" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="Phamacy&#10;Section" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <Button layoutX="17.0" layoutY="354.0" mnemonicParsing="false" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="Phamacy&#10;Section" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutX="18.0" layoutY="216.0" mnemonicParsing="false" onAction="#TimeTable" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="Time table" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>

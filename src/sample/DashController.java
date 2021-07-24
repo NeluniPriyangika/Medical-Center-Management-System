@@ -58,6 +58,7 @@ public class DashController implements Initializable {
     private CheckBox iscovid;
 
     @FXML
+    private Button timeTable;
 
     public void newappoinment() throws SQLException, ClassNotFoundException {
         //Database connection
@@ -154,12 +155,14 @@ public class DashController implements Initializable {
         }
     }
 
+
+
     public void seeAllCovid(){
         try{
             FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("ViewAllCovidApp.fxml"));
             Parent root1=(Parent) fxmlLoader.load();
             Stage stage= new Stage();
-            stage.setTitle("All appoinments");
+            stage.setTitle("Covid risk appoinments");
             stage.setScene(new Scene(root1));
             stage.show();
         }catch (Exception e){
@@ -167,6 +170,20 @@ public class DashController implements Initializable {
         }
     }
 
+
+    public void TimeTable(){
+        try{
+            System.out.println("clicked");
+            FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("Timetable.fxml"));
+            Parent root2=(Parent) fxmlLoader.load();
+            Stage stage= new Stage();
+            stage.setTitle("Docter Time table");
+            stage.setScene(new Scene(root2));
+            stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     private void loadUI(String ui){
         Parent root =null;
