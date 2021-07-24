@@ -31,17 +31,17 @@
                   <Image url="@ss1.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="18.0" layoutY="90.0" mnemonicParsing="false" onAction="#seeAll" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="View all apoinments" textFill="WHITE">
+            <Button layoutX="18.0" layoutY="17.0" mnemonicParsing="false" onAction="#seeAll" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="View all apoinments" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="18.0" layoutY="154.0" mnemonicParsing="false" onAction="#seeAllCovid" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="View Covid Risk&#10;Appoinments" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutX="18.0" layoutY="81.0" mnemonicParsing="false" onAction="#seeAllCovid" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="View Covid Risk&#10;Appoinments" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="18.0" layoutY="216.0" mnemonicParsing="false" onAction="#TimeTable" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="Time table" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutX="18.0" layoutY="143.0" mnemonicParsing="false" onAction="#TimeTable" opacity="0.56" prefHeight="48.0" prefWidth="165.0" style="-fx-background-color: #F52887;" styleClass="transparent" text="Docter's Time table" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>

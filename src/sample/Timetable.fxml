@@ -22,12 +22,12 @@
       <DatePicker fx:id="ses_date" layoutX="202.0" layoutY="93.0" promptText="Session Date" />
       <TextField fx:id="ses_time" layoutX="393.0" layoutY="94.0" prefHeight="25.0" prefWidth="92.0" promptText="Time" />
       <Button layoutX="502.0" layoutY="93.0" mnemonicParsing="false" onAction="#addsesstion" prefHeight="25.0" prefWidth="151.0" text="Add New Session" />
-      <TableView layoutX="15.0" layoutY="131.0" prefHeight="309.0" prefWidth="477.0">
+      <TableView fx:id="table" layoutX="15.0" layoutY="131.0" prefHeight="309.0" prefWidth="477.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Session ID" />
-          <TableColumn prefWidth="150.0" text="Docter's Name" />
-            <TableColumn minWidth="0.0" prefWidth="122.0" text="Session Date" />
-            <TableColumn minWidth="0.0" prefWidth="122.0" text="Session Time" />
+          <TableColumn fx:id="col_id" prefWidth="75.0" text="Session ID" />
+          <TableColumn fx:id="col_name" prefWidth="150.0" text="Docter's Name" />
+            <TableColumn fx:id="col_date" minWidth="0.0" prefWidth="122.0" text="Session Date" />
+            <TableColumn fx:id="col_time" minWidth="0.0" prefWidth="122.0" text="Session Time" />
         </columns>
       </TableView>
    </children>

@@ -52,6 +52,7 @@ public class Controller {
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene=new Scene(root);
             stage.setScene(scene);
+            stage.setTitle("Dash Board");
             stage.show();
 
         } else{
@@ -75,6 +76,7 @@ public class Controller {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Register Now");
         stage.show();
     }
 
