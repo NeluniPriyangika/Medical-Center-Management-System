@@ -62,8 +62,6 @@ public class RegController {
             scene=new Scene(root);
             stage.setScene(scene);
             stage.show();
-
-
     }
 
 }

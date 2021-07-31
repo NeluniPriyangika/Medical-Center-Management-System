@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1232.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewAllAppoinController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="1091.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewAllAppoinController">
    <center>
-      <AnchorPane fx:id="pane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="pane" prefHeight="686.0" prefWidth="1232.0" style="-fx-background-color: #EE82EE;" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="table" layoutX="25.0" layoutY="98.0" prefHeight="531.0" prefWidth="1051.0">
+            <TableView fx:id="table" layoutX="21.0" layoutY="140.0" prefHeight="531.0" prefWidth="1051.0">
               <columns>
                 <TableColumn fx:id="col_id" prefWidth="75.0" text="Patient ID " />
                 <TableColumn fx:id="col_pname" prefWidth="212.0" text="Patient Name" />
@@ -21,13 +21,18 @@
                   <TableColumn fx:id="col_pno" minWidth="0.0" prefWidth="117.0" text="Patient Phone No" />
                   <TableColumn fx:id="col_appdate" minWidth="0.0" prefWidth="117.0" text="Appoinment Date" />
                   <TableColumn fx:id="col_apptime" minWidth="0.0" prefWidth="117.0" text="Appoinment Time" />
-                  <TableColumn fx:id="col_covid" minWidth="0.0" prefWidth="117.0" text="Covid Notes " />
+                  <TableColumn fx:id="col_covid" minWidth="0.0" prefWidth="145.0" text="Covid Notes " />
               </columns>
             </TableView>
-            <TextField fx:id="searchbar" layoutX="130.0" layoutY="57.0" prefHeight="25.0" prefWidth="348.0" promptText="Search appoinments" />
-            <Label layoutX="27.0" layoutY="55.0" text="Search Here">
+            <TextField fx:id="searchbar" layoutX="130.0" layoutY="93.0" prefHeight="25.0" prefWidth="348.0" promptText="Search appoinments" />
+            <Label layoutX="27.0" layoutY="91.0" text="Search Here">
                <font>
                   <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="14.0" text="All Appoinments">
+               <font>
+                  <Font size="36.0" />
                </font>
             </Label>
          </children>

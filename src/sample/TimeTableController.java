@@ -2,14 +2,21 @@ package sample;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.time.LocalDate;
@@ -32,6 +39,7 @@ public class TimeTableController implements Initializable {
     private javafx.scene.control.TableColumn<ModelTableTime, String> col_date;
     @FXML
     private javafx.scene.control.TableColumn<ModelTableTime, String> col_time;
+
 
     ObservableList<ModelTableTime> oblist = FXCollections.observableArrayList();
 
@@ -60,6 +68,8 @@ public class TimeTableController implements Initializable {
 
 
     }
+
+
     public void updateTable(){
         String jdbcURL = "jdbc:mysql://localhost/medibase";
         String username = "root";
@@ -88,6 +98,8 @@ public class TimeTableController implements Initializable {
         col_time.setCellValueFactory(new PropertyValueFactory<>("sestime"));
         table.setItems(oblist);
     }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
       updateTable();

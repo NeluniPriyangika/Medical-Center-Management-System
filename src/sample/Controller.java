@@ -51,6 +51,7 @@ public class Controller {
             Parent root = FXMLLoader.load(getClass().getResource("DashBoard.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene=new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("style1.css").toExternalForm());
             stage.setScene(scene);
             stage.setTitle("Dash Board");
             stage.show();
@@ -76,6 +77,7 @@ public class Controller {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.setTitle("Register Now");
         stage.show();
     }

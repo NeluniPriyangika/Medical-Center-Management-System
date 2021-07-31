@@ -145,11 +145,13 @@ public class DashController implements Initializable {
     public void seeAll(){
         try{
             FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("ViewAllAppoinment.fxml"));
+
             Parent root1=(Parent) fxmlLoader.load();
             Stage stage= new Stage();
             stage.setTitle("All appoinments");
             stage.setScene(new Scene(root1));
             stage.show();
+            root1.getStylesheets().add(getClass().getResource("style1.css").toExternalForm());
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -10,26 +10,31 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <left>
-      <AnchorPane prefHeight="400.0" prefWidth="234.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="249.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="279.0" fitWidth="234.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="385.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@doctor.jpg" />
+                  <Image url="@images/img1.jpg" />
                </image>
             </ImageView>
+            <ImageView fitHeight="362.0" fitWidth="250.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/img1.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="46.0" layoutY="-9.0" prefHeight="159.0" prefWidth="165.0" text="Medical Center &#10;Management &#10;System">
+               <font>
+                  <Font name="Barlow Condensed Thin" size="30.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="400.0" prefWidth="357.0" style="-fx-background-color: #00FFFF;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="357.0" style="-fx-background-color: #D462FF;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="79.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@doc1.jpg" />
-               </image>
-            </ImageView>
             <Label layoutX="11.0" layoutY="187.0" text="Username">
                <font>
                   <Font size="18.0" />
@@ -44,14 +49,19 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Button fx:id="registerbutton" layoutX="215.0" layoutY="280.0" mnemonicParsing="false" onAction="#switchtoSC1" prefHeight="30.0" prefWidth="113.0" style="-fx-background-color: #00008B;" text="Register" textFill="WHITE" />
-            <Button fx:id="cancelbutton" layoutX="15.0" layoutY="365.0" mnemonicParsing="false" onAction="#cancelbuttonAction" prefHeight="30.0" prefWidth="316.0" style="-fx-background-color: #FF0000;" text="Cancel" textFill="WHITE">
+            <Button fx:id="registerbutton" layoutX="230.0" layoutY="280.0" mnemonicParsing="false" onAction="#switchtoSC1" prefHeight="30.0" prefWidth="113.0" style="-fx-background-color: #00008B;" text="Register" textFill="WHITE" />
+            <Button fx:id="cancelbutton" layoutX="13.0" layoutY="324.0" mnemonicParsing="false" onAction="#cancelbuttonAction" prefHeight="30.0" prefWidth="332.0" style="-fx-background-color: #FF0000;" text="Cancel" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Label fx:id="loginmessagelabel" layoutX="84.0" layoutY="330.0" prefHeight="18.0" prefWidth="263.0" textFill="#ee1717" />
-            <TextField fx:id="username1" layoutX="103.0" layoutY="188.0" prefHeight="26.0" prefWidth="237.0" promptText="username" />
+            <Label fx:id="loginmessagelabel" layoutX="52.0" layoutY="365.0" prefHeight="18.0" prefWidth="263.0" textFill="#ee1717" />
+            <TextField fx:id="username1" layoutX="99.0" layoutY="188.0" prefHeight="26.0" prefWidth="242.0" promptText="username" />
             <PasswordField fx:id="password1" layoutX="99.0" layoutY="231.0" prefHeight="26.0" prefWidth="243.0" promptText="password" />
+            <ImageView fitHeight="224.0" fitWidth="246.0" layoutX="63.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/d3.jpg" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </right>
