@@ -96,6 +96,8 @@ public class ViewAllAppoinController implements Initializable {
                     return true;
                 } else if (ModelTable.getAppdate().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                     return true;
+                } else if (ModelTable.getPname().toLowerCase().indexOf(lowerCaseFilter) != -1){
+                    return true;
                 } else
                     return false;
 
